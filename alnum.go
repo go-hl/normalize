@@ -5,12 +5,12 @@ import (
 	"strings"
 )
 
-// Alnum retain only single white spaces between words and alnum chars. At end trasnform to lower.
+// String retain only single white spaces between words and alnum chars. At end trasnform to lower.
 //
 // E.g.:
 //
 //	` @h3LLo !|   W0#Rld  ` -> `h3llo w0rld`
-func Alnum(str string) string {
+func String(str string) string {
 	// exclude any punct char
 	alnum := regexp.MustCompile(`[[:punct:]]`).ReplaceAllString(str, "")
 
